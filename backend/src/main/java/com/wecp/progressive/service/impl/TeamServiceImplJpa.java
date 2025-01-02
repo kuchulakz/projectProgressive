@@ -1,4 +1,5 @@
 package com.wecp.progressive.service.impl;
+<<<<<<< HEAD
  
 import java.util.List;
  
@@ -32,3 +33,9 @@ public class TeamServiceImplJpa implements TeamService  {
    
  
 }
+=======
+
+public class TeamServiceImplJpa  {
+
+}
+>>>>>>> 4f06e34dfc2e0366bd3b5c08b56117333375e1bc
