@@ -1,5 +1,4 @@
 package com.wecp.progressive.dao;
-<<<<<<< HEAD
  
  
 import com.wecp.progressive.config.DatabaseConnectionManager;
@@ -168,47 +167,3 @@ public class TeamDAOImpl implements TeamDAO {
     }
  
 }
-=======
-
-import java.util.List;
-
-import com.wecp.progressive.entity.Team;
-
-public class TeamDAOImpl implements TeamDAO {
-
-    @Override
-    public int addTeam(Team team) {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-
-    @Override
-    public void deleteTeam(int teamId) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public List<Team> getAllTeams() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public Team getTeamById(int teamId) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public void updateTeam(Team team) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    
-
-
-
-}
->>>>>>> 4f06e34dfc2e0366bd3b5c08b56117333375e1bc

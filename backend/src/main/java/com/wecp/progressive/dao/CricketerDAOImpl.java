@@ -1,5 +1,4 @@
 package com.wecp.progressive.dao;
-<<<<<<< HEAD
  
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -180,44 +179,3 @@ public class CricketerDAOImpl implements CricketerDAO {
  
 }
  
-=======
-
-import java.util.List;
-
-import com.wecp.progressive.entity.Cricketer;
-
-public class CricketerDAOImpl implements CricketerDAO{
-
-    @Override
-    public int addCricketer(Cricketer cricketer) {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-
-    @Override
-    public void deleteCricketer(int cricketerId) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public List<Cricketer> getAllCricketers() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public Cricketer getCricketerById(int cricketerId) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public void updateCricketer(Cricketer cricketer) {
-        // TODO Auto-generated method stub
-        
-    }
-    
-
-}
->>>>>>> 4f06e34dfc2e0366bd3b5c08b56117333375e1bc

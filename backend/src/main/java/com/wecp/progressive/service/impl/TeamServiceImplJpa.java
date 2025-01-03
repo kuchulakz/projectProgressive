@@ -1,41 +1,57 @@
 package com.wecp.progressive.service.impl;
-<<<<<<< HEAD
  
+import java.sql.SQLException;
+import java.util.Comparator;
 import java.util.List;
  
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.wecp.progressive.dao.TeamDAO;
 import com.wecp.progressive.entity.Team;
+import com.wecp.progressive.repository.TeamRepository;
 import com.wecp.progressive.service.TeamService;
  
+@Service
 public class TeamServiceImplJpa implements TeamService  {
-    private TeamDAO teamDAO;
+    @Autowired
+    private TeamRepository teamRepository;
    
- 
-    public TeamServiceImplJpa(TeamDAO teamDAO) {
-        this.teamDAO = teamDAO;
+    @Autowired
+    public TeamServiceImplJpa(TeamRepository teamRepository) {
+        this.teamRepository = teamRepository;
     }
  
     @Override
-    public List<Team> getAllTeams() {
-        return null;
+    public List<Team> getAllTeams() throws SQLException{
+        return teamRepository.findAll();
        
     }
  
     @Override
-    public int addTeam(Team team) {
-        return -1;
+    public int addTeam(Team team) throws SQLException{
+        return teamRepository.save(team).getTeamId();
     }
  
     @Override
-    public List<Team> getAllTeamsSortedByName() {
-        return List.of();
+    public List<Team> getAllTeamsSortedByName() throws SQLException{
+        List<Team> sortedTeam = teamRepository.findAll();
+        sortedTeam.sort(Comparator.comparing(Team::getTeamName));
+        return sortedTeam;
     }
-   
  
+    @Override
+    public Team getTeamById(int teamId) throws SQLException{
+        return teamRepository.findByTeamId(teamId);
+    }
+ 
+    @Override
+    public void updateTeam(Team team) throws SQLException{
+        teamRepository.save(team);
+    }
+ 
+    @Override
+    public void deleteTeam(int teamId) throws SQLException{
+        teamRepository.findByTeamId(teamId);
+    }
 }
-=======
-
-public class TeamServiceImplJpa  {
-
-}
->>>>>>> 4f06e34dfc2e0366bd3b5c08b56117333375e1bc

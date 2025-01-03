@@ -1,5 +1,4 @@
 package com.wecp.progressive.service.impl;
-<<<<<<< HEAD
  
 import java.util.ArrayList;
 import java.util.Collection;
@@ -38,9 +37,4 @@ public class CricketerServiceImplArraylist implements CricketerService {
         cricketerList = new ArrayList<>();
     }
  
-=======
-
-public class CricketerServiceImplArraylist  {
-
->>>>>>> 4f06e34dfc2e0366bd3b5c08b56117333375e1bc
 }
